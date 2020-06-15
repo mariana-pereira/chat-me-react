@@ -31,7 +31,10 @@ module.exports = {
     ],
     'import/prefer-default-export': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
-    '@typescript-eslint/explicit-member-accessibility': 'off'
+    '@typescript-eslint/explicit-member-accessibility': 'off',
+    'react/prop-types': 0,
+    'import/extensions': 'off',
+    'react/jsx-props-no-spreading': 'off'
   },
   settings: {
     'import/parsers': {
