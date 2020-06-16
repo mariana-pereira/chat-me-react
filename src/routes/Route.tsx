@@ -1,6 +1,8 @@
 import React from 'react';
 import { Route, Redirect, RouteProps } from 'react-router-dom';
 
+import store from '../store';
+
 interface Props extends RouteProps {
   isPrivate?: boolean;
   component: React.ComponentType;
@@ -11,7 +13,7 @@ const RouteWrapper: React.FC<Props> = ({
   isPrivate,
   ...rest
 }) => {
-  const signed = false;
+  const { signed } = store.getState().auth;
 
   if (!signed && isPrivate) {
     return <Redirect to="/login" />;
