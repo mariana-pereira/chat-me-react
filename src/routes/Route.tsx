@@ -1,5 +1,7 @@
 import React from 'react';
-import { Route, Redirect, RouteProps } from 'react-router-dom';
+import {
+  Route, Redirect, RouteProps, useLocation,
+} from 'react-router-dom';
 
 import store from '../store';
 
@@ -10,23 +12,32 @@ interface Props extends RouteProps {
 
 const RouteWrapper: React.FC<Props> = ({
   component: Component,
-  isPrivate,
+  isPrivate = false,
   ...rest
 }) => {
+  const location = useLocation();
   const { signed } = store.getState().auth;
-
-  if (!signed && isPrivate) {
-    return <Redirect to="/login" />;
-  }
-
-  if (signed && !isPrivate) {
-    return <Redirect to="/" />;
-  }
 
   return (
     <Route
       {...rest}
-      component={Component}
+      render={() => (
+        (!!signed === isPrivate
+          ? (
+            <Component />
+          )
+          : (
+            <Redirect
+              to={{
+                pathname: isPrivate
+                  ? '/login'
+                  : '/',
+                state: { from: location },
+              }}
+            />
+          )
+        )
+      )}
     />
   );
 };

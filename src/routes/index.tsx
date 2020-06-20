@@ -11,7 +11,7 @@ const Routes: React.FC = () => (
     <Route path="/login" component={Login} />
     <Route path="/register" component={Register} />
 
-    <Route path="/" exact isPrivate component={Main} />
+    <Route path="/" exact component={Main} isPrivate />
     <Route path="/" component={() => <h1>404</h1>} />
   </Switch>
 );

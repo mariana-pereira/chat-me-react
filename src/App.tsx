@@ -3,9 +3,9 @@ import { Provider } from 'react-redux';
 import { Router } from 'react-router-dom';
 
 import Routes from './routes';
-import history from './services/history';
 
 import store from './store';
+import history from './services/history';
 
 import GlobalStyles from './styles/global';
 
