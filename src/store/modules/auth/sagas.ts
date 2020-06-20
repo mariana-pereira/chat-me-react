@@ -7,7 +7,7 @@ import history from '../../../services/history';
 
 import { SignInRequestAction, AuthTypes } from './types';
 
-import { signInSuccess } from './actions';
+import { signInSuccess, signInFailure } from './actions';
 
 export function* signIn(action: SignInRequestAction) {
   try {
@@ -19,7 +19,7 @@ export function* signIn(action: SignInRequestAction) {
     yield put(signInSuccess(token, user));
     history.push('/');
   } catch (error) {
-    console.log(error);
+    yield put(signInFailure());
   }
 }
 

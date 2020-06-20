@@ -1,7 +1,9 @@
 import React, { InputHTMLAttributes } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { SubmitHandler } from '@unform/core';
 import { Form } from '@unform/web';
+
+import { ApplicationState } from '../../../store';
 
 import { signInRequest } from '../../../store/modules/auth/actions';
 
@@ -19,6 +21,7 @@ interface FormData extends InputHTMLAttributes<HTMLInputElement> {
 
 const Login: React.FC = () => {
   const dispatch = useDispatch();
+  const loading = useSelector((state: ApplicationState) => state.auth.loading);
 
   const handleSubmit: SubmitHandler<FormData> = (data) => {
     dispatch(signInRequest(data));
@@ -37,7 +40,7 @@ const Login: React.FC = () => {
             type="password"
             placeholder="Digite sua senha"
           />
-          <button type="submit">Entrar</button>
+          <button type="submit">{loading ? 'Carregando...' : 'Acessar'}</button>
         </Form>
       </Auth>
     </Container>
