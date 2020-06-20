@@ -1,8 +1,7 @@
 /* eslint-disable implicit-arrow-linebreak */
 import { action } from 'typesafe-actions';
-import {
-  AuthTypes, Credentials, User,
-} from './types';
+import { AuthTypes, Credentials } from './types';
+import { User } from '../user/types';
 
 export const signInRequest = (credentials: Credentials) =>
   action(AuthTypes.SIGN_IN_REQUEST, credentials);

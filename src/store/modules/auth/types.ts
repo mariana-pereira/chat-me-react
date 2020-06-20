@@ -1,3 +1,5 @@
+import { User } from '../user/types';
+
 /**
  * Action types
  */
@@ -28,12 +30,6 @@ export interface SignFailureAction {
 /**
   * Data types
   */
-
-export interface User {
-  id: string;
-  name: string;
-  email: string;
-}
 
 export interface Credentials {
   email: string;

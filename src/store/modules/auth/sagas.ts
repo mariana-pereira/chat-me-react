@@ -1,9 +1,11 @@
-import { call, put } from 'redux-saga/effects';
+import {
+  call, put, all, takeLatest,
+} from 'redux-saga/effects';
 
 import api from '../../../services/api';
 import history from '../../../services/history';
 
-import { SignInRequestAction } from './types';
+import { SignInRequestAction, AuthTypes } from './types';
 
 import { signInSuccess } from './actions';
 
@@ -20,3 +22,7 @@ export function* signIn(action: SignInRequestAction) {
     console.log(error);
   }
 }
+
+export default all([
+  takeLatest(AuthTypes.SIGN_IN_REQUEST, signIn),
+]);
