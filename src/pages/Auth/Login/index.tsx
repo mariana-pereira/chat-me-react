@@ -1,4 +1,5 @@
 import React, { InputHTMLAttributes } from 'react';
+import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { SubmitHandler } from '@unform/core';
 import { Form } from '@unform/web';
@@ -41,6 +42,7 @@ const Login: React.FC = () => {
             placeholder="Digite sua senha"
           />
           <button type="submit">{loading ? 'Carregando...' : 'Acessar'}</button>
+          <Link to="/register">Criar conta gratuita</Link>
         </Form>
       </Auth>
     </Container>

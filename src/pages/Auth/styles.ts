@@ -49,6 +49,12 @@ export const Auth = styled.div`
       border-radius: 4px;
       margin: 5px 0 0;
     }
+
+    a {
+      margin-top: 10px;
+      color: #fff;
+      align-self: center;
+    }
 `;
 
 export const Logo = styled.img`

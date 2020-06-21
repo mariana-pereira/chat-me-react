@@ -1,4 +1,5 @@
 import React, { InputHTMLAttributes } from 'react';
+import { Link } from 'react-router-dom';
 import { SubmitHandler } from '@unform/core';
 import { Form } from '@unform/web';
 
@@ -34,7 +35,7 @@ const Register: React.FC = () => {
             placeholder="Digite sua senha"
           />
           <button type="submit">Cadastrar</button>
-
+          <Link to="/login">Já tenho login</Link>
         </Form>
       </Auth>
     </Container>
