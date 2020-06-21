@@ -9,4 +9,7 @@ export const signInRequest = (credentials: Credentials) =>
 export const signInSuccess = (token: string, user: User) =>
   action(AuthTypes.SIGN_IN_SUCCESS, { token, user });
 
+export const signUpRequest = (credentials: Credentials) =>
+  action(AuthTypes.SIGN_UP_REQUEST, credentials);
+
 export const signInFailure = () => action(AuthTypes.SIGN_IN_FAILURE);

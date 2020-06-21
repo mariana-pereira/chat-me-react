@@ -7,6 +7,7 @@ import { User } from '../user/types';
 export enum AuthTypes {
    SIGN_IN_REQUEST = '@auth/SIGN_IN_RESQUEST',
    SIGN_IN_SUCCESS = '@auth/SIGN_IN_SUCCESS',
+   SIGN_UP_REQUEST = '@auth/SIGN_UP_REQUEST',
    SIGN_IN_FAILURE = '@auth/SIGN_IN_FAILURE'
  }
 
@@ -23,6 +24,11 @@ export interface SignInSuccessAction {
   };
 }
 
+export interface SignUpRequestAction {
+  type: typeof AuthTypes.SIGN_UP_REQUEST
+  payload: Credentials;
+}
+
 export interface SignFailureAction {
   type: typeof AuthTypes.SIGN_IN_FAILURE
 }
@@ -32,6 +38,7 @@ export interface SignFailureAction {
   */
 
 export interface Credentials {
+  name?: string;
   email: string;
   password: string;
 }

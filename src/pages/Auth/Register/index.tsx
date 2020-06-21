@@ -1,9 +1,12 @@
 import React, { InputHTMLAttributes } from 'react';
 import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 import { SubmitHandler } from '@unform/core';
 import { Form } from '@unform/web';
 
 import Input from '../../../components/Input';
+
+import { signUpRequest } from '../../../store/modules/auth/actions';
 
 import logo from '../../../assets/logo-light.svg';
 import {
@@ -16,8 +19,10 @@ interface FormData extends InputHTMLAttributes<HTMLInputElement> {
 };
 
 const Register: React.FC = () => {
+  const dispatch = useDispatch();
+
   const handleSubmit: SubmitHandler<FormData> = (data) => {
-    console.log(data);
+    dispatch(signUpRequest(data));
   };
 
   return (
