@@ -8,7 +8,7 @@ import Input from '../../../components/Input';
 
 import { signUpRequest } from '../../../store/modules/auth/actions';
 
-import logo from '../../../assets/logo-light.svg';
+import logo from '../../../assets/logo.svg';
 import {
   Container, Image, Auth, Logo,
 } from '../styles';

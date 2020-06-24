@@ -10,7 +10,7 @@ import { signInRequest } from '../../../store/modules/auth/actions';
 
 import Input from '../../../components/Input';
 
-import logo from '../../../assets/logo-light.svg';
+import logo from '../../../assets/logo.svg';
 import {
   Container, Image, Auth, Logo,
 } from '../styles';
