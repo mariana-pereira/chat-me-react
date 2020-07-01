@@ -1,13 +1,15 @@
 import React from 'react';
 
 import Header from '../../components/Header';
+import ContactList from '../../components/ContactList';
 
-// import { Container } from './styles';
+import { Container } from './styles';
 
 const Main: React.FC = () => (
-  <div>
+  <Container>
     <Header />
-  </div>
+    <ContactList />
+  </Container>
 );
 
 export default Main;
