@@ -1,6 +1,9 @@
 import * as Yup from 'yup';
 
 const signInSchema = Yup.object().shape({
+  name: Yup
+    .string()
+    .required('O nome é obrigatório'),
   email: Yup
     .string()
     .email()

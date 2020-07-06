@@ -3,12 +3,14 @@ import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { SubmitHandler } from '@unform/core';
 import { Form } from '@unform/web';
+import { toast } from 'react-toastify';
 
 import Input from '../../components/Input';
-
 import Layout from '../../Layouts/Auth';
 
 import { signUpRequest } from '../../store/modules/auth/actions';
+
+import schema from './schema';
 
 interface FormData extends InputHTMLAttributes<HTMLInputElement> {
   email: string;
@@ -18,8 +20,14 @@ interface FormData extends InputHTMLAttributes<HTMLInputElement> {
 const Register: React.FC = () => {
   const dispatch = useDispatch();
 
-  const handleSubmit: SubmitHandler<FormData> = (data) => {
-    dispatch(signUpRequest(data));
+  const handleSubmit: SubmitHandler<FormData> = async (data) => {
+    try {
+      await schema.validate(data);
+
+      dispatch(signUpRequest(data));
+    } catch (error) {
+      toast.error(error.message);
+    }
   };
 
   return (
