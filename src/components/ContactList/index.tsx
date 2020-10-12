@@ -3,11 +3,12 @@ import React from 'react';
 import Image from '../../assets/prof_pic.jpg';
 
 import {
-  Container, Contact, ContactImage, ContactInfo,
+  Container, Header, Contact, ContactImage, ContactInfo,
 } from './styles';
 
 const ContactList: React.FC = () => (
   <Container>
+    <Header />
     <Contact>
       <ContactImage>
         <img src={Image} alt="Profile" />
