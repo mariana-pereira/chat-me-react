@@ -19,7 +19,7 @@ export interface ApplicationState {
 const persistConfig = {
   key: 'chat-app',
   storage,
-  whitelist: ['auth', 'user'],
+  whitelist: ['auth', 'user', 'theme'],
 };
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

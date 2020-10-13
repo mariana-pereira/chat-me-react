@@ -2,6 +2,10 @@ import React, { useContext } from 'react';
 import Switch from 'react-switch';
 import { ThemeContext } from 'styled-components';
 import { shade } from 'polished';
+import { useSelector, useDispatch } from 'react-redux';
+
+import { ApplicationState } from '../../store';
+import * as ThemeActions from '../../store/modules/theme/actions';
 
 import Image from '../../assets/prof_pic.jpg';
 import dark from '../../styles/themes/dark';
@@ -13,9 +17,17 @@ import {
 
 const ContactList: React.FC = () => {
   const { colors, title } = useContext(ThemeContext);
+  let theme;
+  const dispatch = useDispatch();
 
   const toggleTheme = () => {
-    console.log('ok');
+    if (title === 'light') {
+      theme = dark;
+    } else {
+      theme = light;
+    }
+
+    dispatch(ThemeActions.applyTheme(theme));
   };
 
   return (
@@ -29,7 +41,7 @@ const ContactList: React.FC = () => {
           height={20}
           width={40}
           handleDiameter={20}
-          onColor={colors.secondary}
+          onColor={shade(0.5, colors.secondary)}
           offColor={shade(0.15, colors.primary)}
         />
       </Header>
