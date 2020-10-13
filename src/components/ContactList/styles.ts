@@ -6,6 +6,9 @@ export const Container = styled.div`
 `;
 
 export const Header = styled.div`
+  width: 24.75%;
+  position: fixed;
+  top: 0;
   height: 70px;
   background: ${(props) => props.theme.colors.primary};
   z-index: 1;
@@ -20,7 +23,11 @@ export const Header = styled.div`
   padding: 10px;
 `;
 
-export const Contact = styled.div`
+export const ContactsContainer = styled.ul`
+  margin-top: 75px;
+`;
+
+export const Contact = styled.li`
   background: ${(props) => props.theme.colors.primary};
   padding: 10px;
   display: flex;

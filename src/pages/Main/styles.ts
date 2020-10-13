@@ -7,5 +7,12 @@ export const Container = styled.div`
 
   .left {
     width: 35%;
+    position: relative;
+    height: 100%;
+    overflow: scroll;
+    overflow-anchor: none;
+    touch-action: auto;
+    display: block;
+    text-align: center;
   }
 `;

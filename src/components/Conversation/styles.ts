@@ -14,7 +14,7 @@ export const Container = styled.div`
 export const Header = styled.div`
   height: 70px;
   background: ${(props) => props.theme.colors.gray};
-  z-index: 1;
+  z-index: 99;
   box-shadow: 0 2px 0 rgba(255, 255, 255, 0.5) inset,
                 0 -2px 0 rgba(255, 255, 255, 0.1) inset,
                 0 5px 0 rgba(0, 0, 0, 0.01),
