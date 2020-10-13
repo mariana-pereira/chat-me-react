@@ -9,9 +9,11 @@ import { AuthState } from './modules/auth/types';
 
 import rootReducer from './modules/rootReducer';
 import rootSaga from './modules/rootSaga';
+import { ThemeState } from './modules/theme/types';
 
 export interface ApplicationState {
   auth: AuthState;
+  theme: ThemeState;
 }
 
 const persistConfig = {
