@@ -13,6 +13,11 @@ export const Header = styled.div`
                 0 -2px 0 rgba(255, 255, 255, 0.1) inset,
                 0 5px 0 #338494,
                 0 5px 3px rgba(0, 0, 0, 0.5);
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px;
 `;
 
 export const Contact = styled.div`
