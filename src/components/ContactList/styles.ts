@@ -7,7 +7,7 @@ export const Container = styled.div`
 
 export const Header = styled.div`
   height: 70px;
-  background: #0077b6;
+  background: ${(props) => props.theme.colors.primary};
   z-index: 1;
   box-shadow: 0 2px 0 rgba(255, 255, 255, 0.5) inset,
                 0 -2px 0 rgba(255, 255, 255, 0.1) inset,
@@ -16,7 +16,7 @@ export const Header = styled.div`
 `;
 
 export const Contact = styled.div`
-  background: #0077b6;
+  background: ${(props) => props.theme.colors.primary};
   padding: 10px;
   display: flex;
   border-bottom: 2px solid rgba(255, 255, 255, 0.05);
@@ -36,7 +36,7 @@ export const ContactInfo = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: #fff;
+  color: ${(props) => props.theme.colors.textLight};
 
   p {
     margin-top: 10px;
