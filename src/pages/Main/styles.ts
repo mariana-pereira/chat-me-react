@@ -6,7 +6,18 @@ export const Container = styled.div`
   display: flex;
 
   .left {
-    width: 35%;
+    width: 25%;
+    position: relative;
+    height: 100%;
+    overflow: scroll;
+    overflow-anchor: none;
+    touch-action: auto;
+    display: block;
+    text-align: center;
+  }
+
+  .right {
+    flex: 1;
     position: relative;
     height: 100%;
     overflow: scroll;

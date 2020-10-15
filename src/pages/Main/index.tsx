@@ -10,7 +10,9 @@ const Main: React.FC = () => (
     <div className="left">
       <ContactList />
     </div>
-    <Conversation />
+    <div className="right">
+      <Conversation />
+    </div>
   </Container>
 );
 

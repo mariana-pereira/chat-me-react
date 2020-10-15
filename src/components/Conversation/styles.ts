@@ -8,10 +8,13 @@ interface ContainerProps {
 
 export const Container = styled.div`
   width: 100%;
-  height: 100%;
+  height: 100vh;
 `;
 
 export const Header = styled.div`
+  width: 100%;
+  position: sticky;
+  top: 0;
   height: 70px;
   background: ${(props) => props.theme.colors.gray};
   z-index: 99;
