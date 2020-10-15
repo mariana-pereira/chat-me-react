@@ -9,7 +9,9 @@ const AuthLayout: React.FC = ({ children }) => (
     <Background>
       <img src={authImage} alt="auth" />
     </Background>
-    <Content>{children}</Content>
+    <Content>
+      {children}
+    </Content>
   </Container>
 );
 
