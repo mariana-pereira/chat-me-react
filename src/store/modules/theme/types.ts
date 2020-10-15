@@ -23,8 +23,8 @@ export interface Theme {
     secondary: string;
     gray: string;
     background: string;
-    textLight: string;
-    textDark: string;
+    text: string;
+    primaryText: string;
   },
 }
 

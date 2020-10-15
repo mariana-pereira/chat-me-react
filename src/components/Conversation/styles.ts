@@ -16,7 +16,7 @@ export const Header = styled.div`
   position: sticky;
   top: 0;
   height: 70px;
-  background: ${(props) => props.theme.colors.gray};
+  background: ${(props) => props.theme.colors.primary};
   z-index: 99;
   box-shadow: 0 2px 0 rgba(255, 255, 255, 0.5) inset,
                 0 -2px 0 rgba(255, 255, 255, 0.1) inset,
@@ -40,7 +40,7 @@ export const Message = styled.div<ContainerProps>`
     background: ${(props) => (props.isCurrent ? props.theme.colors.primary : props.theme.colors.gray)};
     border-radius: ${(props) => (props.isCurrent ? '20px 20px 0 20px' : '20px 20px 20px 0')};
     padding: 10px 20px;
-    color: ${(props) => (props.isCurrent ? props.theme.colors.textLight : props.theme.colors.textDark)};
+    color: ${(props) => (props.isCurrent ? props.theme.colors.primaryText : props.theme.colors.text)};
     display: inline-block;
   }
 `;

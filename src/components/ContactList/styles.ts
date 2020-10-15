@@ -14,7 +14,7 @@ export const Header = styled.div`
   z-index: 1;
   box-shadow: 0 2px 0 rgba(255, 255, 255, 0.5) inset,
                 0 -2px 0 rgba(255, 255, 255, 0.1) inset,
-                0 5px 0 #338494,
+                0 5px 0 rgba(0, 0, 0, 0.01),
                 0 5px 3px rgba(0, 0, 0, 0.5);
 
   display: flex;
@@ -28,10 +28,11 @@ export const ContactsContainer = styled.ul`
 `;
 
 export const Contact = styled.li`
-  background: ${(props) => props.theme.colors.primary};
+  background: ${(props) => props.theme.colors.background};
   padding: 10px;
   display: flex;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 2px solid;
+  border-bottom-color: ${(props) => props.theme.colors.gray}
 `;
 
 export const ContactImage = styled.div`
@@ -48,7 +49,7 @@ export const ContactInfo = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: ${(props) => props.theme.colors.textLight};
+  color: ${(props) => props.theme.colors.text};
 
   p {
     margin-top: 10px;
