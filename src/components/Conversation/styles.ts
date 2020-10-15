@@ -44,3 +44,34 @@ export const Message = styled.div<ContainerProps>`
     display: inline-block;
   }
 `;
+
+export const Footer = styled.footer`
+  width: 100%;
+  height: 60px;
+  background: ${(props) => props.theme.colors.gray};
+  position: sticky;
+  bottom: 0;
+
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+
+  input {
+    height: 40px;
+    width: 90%;
+    padding: 5px 20px;
+    margin: 0 25px;
+    border: 1px solid #333;
+    border-radius: 20px;
+  }
+
+  button {
+    background: 0;
+    border: 0;
+
+    svg {
+      font-size: 30px;
+      color: ${(props) => props.theme.colors.primary}
+    }
+  }
+`;

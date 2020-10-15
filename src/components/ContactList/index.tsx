@@ -2,9 +2,8 @@ import React, { useContext } from 'react';
 import Switch from 'react-switch';
 import { ThemeContext } from 'styled-components';
 import { shade } from 'polished';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
-import { ApplicationState } from '../../store';
 import * as ThemeActions from '../../store/modules/theme/actions';
 
 import Image from '../../assets/prof_pic.jpg';
