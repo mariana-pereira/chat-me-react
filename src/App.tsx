@@ -1,26 +1,32 @@
 import React from 'react';
-import { Provider } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import { Router } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
+import { ThemeProvider } from 'styled-components';
 
 import Routes from './routes';
 
-import { store, persistor } from './store';
+import { ApplicationState, persistor } from './store';
+
 import history from './services/history';
 
 import GlobalStyles from './styles/global';
 
-const App: React.FC = () => (
-  <Provider store={store}>
-    <PersistGate persistor={persistor}>
-      <Router history={history}>
-        <Routes />
-        <GlobalStyles />
-        <ToastContainer autoClose={3000} />
-      </Router>
-    </PersistGate>
-  </Provider>
-);
+const App: React.FC = () => {
+  const theme = useSelector((state: ApplicationState) => state.theme.theme);
+
+  return (
+    <ThemeProvider theme={theme}>
+      <PersistGate persistor={persistor}>
+        <Router history={history}>
+          <Routes />
+          <GlobalStyles />
+          <ToastContainer autoClose={3000} />
+        </Router>
+      </PersistGate>
+    </ThemeProvider>
+  );
+};
 
 export default App;

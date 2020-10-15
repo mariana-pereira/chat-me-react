@@ -8367,10 +8367,10 @@ pnp-webpack-plugin@1.6.4:
   dependencies:
     ts-pnp "^1.1.6"
 
-polished@^3.6.5:
-  version "3.6.7"
-  resolved "https://registry.yarnpkg.com/polished/-/polished-3.6.7.tgz#44cbd0047f3187d83db0c479ef0c7d5583af5fb6"
-  integrity sha512-b4OViUOihwV0icb9PHmWbR+vPqaSzSAEbgLskvb7ANPATVXGiYv/TQFHQo65S53WU9i5EQ1I03YDOJW7K0bmYg==
+polished@^4.0.2:
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/polished/-/polished-4.0.2.tgz#58f6a215dd93038c5b3808725ed31e208c2e6403"
+  integrity sha512-TJd61zfqQrVdysU04GzSKThFWgQrpFLrHZgKfv5BwRSxOrqFIgzLYKWWML4Q8EMMsJBUgwMitI10w9lpBMo+xQ==
   dependencies:
     "@babel/runtime" "^7.9.2"
 
@@ -9481,6 +9481,13 @@ react-scroll-to-bottom@^4.0.0:
     math-random "2.0.1"
     prop-types "15.7.2"
     simple-update-in "2.2.0"
+
+react-switch@^5.0.1:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/react-switch/-/react-switch-5.0.1.tgz#449277f4c3aed5286fffd0f50d5cbc2a23330406"
+  integrity sha512-Pa5kvqRfX85QUCK1Jv0rxyeElbC3aNpCP5hV0LoJpU/Y6kydf0t4kRriQ6ZYA4kxWwAYk/cH51T4/sPzV9mCgQ==
+  dependencies:
+    prop-types "^15.6.2"
 
 react-toastify@^6.0.5:
   version "6.0.9"
