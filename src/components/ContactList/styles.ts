@@ -1,58 +1,35 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
-  width: 100%;
-  height: 100%;
-`;
+export const Container = styled.ul`
+  grid-area: CL;
+  padding: 3px;
+  max-height: calc(100vh - 250px);
+  overflow-y: scroll;
 
-export const Header = styled.div`
-  width: 100%;
-  position: sticky;
-  top: 0;
-  height: 70px;
-  background: ${(props) => props.theme.colors.primary};
-  z-index: 1;
-  box-shadow: 0 2px 0 rgba(255, 255, 255, 0.5) inset,
-                0 -2px 0 rgba(255, 255, 255, 0.1) inset,
-                0 5px 0 rgba(0, 0, 0, 0.01),
-                0 5px 3px rgba(0, 0, 0, 0.5);
-
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 10px;
-`;
-
-export const ContactsContainer = styled.ul`
-
+  ::-webkit-scrollbar {
+    display: none;
+  }
 `;
 
 export const Contact = styled.li`
-  background: ${(props) => props.theme.colors.background};
-  padding: 10px;
+  background-color: ${(props) => props.theme.colors.gray};
   display: flex;
-  border-bottom: 2px solid;
-  border-bottom-color: ${(props) => props.theme.colors.gray}
-`;
-
-export const ContactImage = styled.div`
-  width: 100px;
-
-  img {
-    width: 70px;
-    border-radius: 50%;
-  }
-`;
-
-export const ContactInfo = styled.div`
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  color: ${(props) => props.theme.colors.text};
+  padding: 5px 20px;
+  border-radius: 20px;
 
-  p {
-    margin-top: 10px;
-    opacity: 0.5;
+  & + li {
+    margin-top: 4px;
   }
+`;
+
+export const Avatar = styled.img`
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+`;
+
+export const Name = styled.strong`
+  margin-left: 15px;
+  color: ${(props) => props.theme.colors.text};
 `;

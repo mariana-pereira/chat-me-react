@@ -21,6 +21,7 @@ const Main: React.FC = () => {
   return (
     <Container>
       <Sidenav />
+      <ContactList />
     </Container>
   );
 };
