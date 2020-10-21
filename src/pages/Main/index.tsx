@@ -22,6 +22,7 @@ const Main: React.FC = () => {
     <Container>
       <Sidenav />
       <ContactList />
+      <Conversation />
     </Container>
   );
 };
