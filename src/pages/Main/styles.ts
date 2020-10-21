@@ -1,29 +1,13 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  width: 100%;
-  height: 100%;
-  display: flex;
+  display: grid;
 
-  .left {
-    width: 25%;
-    position: relative;
-    height: 100%;
-    overflow: scroll;
-    overflow-anchor: none;
-    touch-action: auto;
-    display: block;
-    text-align: center;
-  }
+  grid-template-columns: 55px 240px auto 240px;
+  grid-template-rows: 250px auto;
 
-  .right {
-    flex: 1;
-    position: relative;
-    height: 100%;
-    overflow: scroll;
-    overflow-anchor: none;
-    touch-action: auto;
-    display: block;
-    text-align: center;
-  }
+  grid-template-areas:
+    'SN UI MC CI'
+    'SN CL MC CI';
+  height: 100vh;
 `;
