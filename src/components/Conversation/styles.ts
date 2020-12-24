@@ -1,42 +1,45 @@
 import styled from 'styled-components';
-// @ts-ignore
-import ScrollToBottom from 'react-scroll-to-bottom';
-
-interface ContainerProps {
-  isCurrent: boolean;
-}
+import { MdSend } from 'react-icons/md';
 
 export const Container = styled.div`
-  width: 100%;
-  height: 100%;
-`;
-
-export const Header = styled.div`
-  height: 70px;
-  background: #c9cccd;
-  z-index: 1;
-  box-shadow: 0 2px 0 rgba(255, 255, 255, 0.5) inset,
-                0 -2px 0 rgba(255, 255, 255, 0.1) inset,
-                0 5px 0 rgba(0, 0, 0, 0.01),
-                0 5px 3px rgba(0, 0, 0, 0.5);
-`;
-
-export const MessageContainer = styled(ScrollToBottom)`
-  width: 100%;
-  height: 100%;
-`;
-
-export const Message = styled.div<ContainerProps>`
+  grid-area: MC;
+  max-height: 100vh;
+  background-color: ${(props) => props.theme.colors.gray};
+  border-radius: 20px;
+  margin: 5px;
+  padding: 7px;
   display: flex;
-  justify-content: ${(props) => (props.isCurrent ? 'flex-end' : 'flex-start')};
-  padding: 0 5%;
-  margin-top: 15px;
+  flex-direction: column;
+  justify-content: space-between;
+`;
 
-  div {
-    background: ${(props) => (props.isCurrent ? '#0077b6' : '#c9cccd')};
-    border-radius: ${(props) => (props.isCurrent ? '20px 20px 0 20px' : '20px 20px 20px 0')};
-    padding: 10px 20px;
-    color: ${(props) => (props.isCurrent ? '#fff' : '#353535')};
-    display: inline-block;
-  }
+export const MessageContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const InputWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+`;
+
+export const Input = styled.input`
+  height: 40px;
+  width: 95%;
+  padding: 5px 20px;
+  margin: 0 25px;
+  border: 1px solid #333;
+  border-radius: 20px;
+`;
+
+export const SendButton = styled.button`
+  background: 0;
+  border: 0;
+`;
+
+export const SendIcon = styled(MdSend)`
+  width: 30px;
+  height: 30px;
+  color: ${(props) => props.theme.colors.primary};
 `;

@@ -1,45 +1,35 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
-  width: 100%;
-  height: 100%;
-`;
+export const Container = styled.ul`
+  grid-area: CL;
+  padding: 3px;
+  max-height: calc(100vh - 250px);
+  overflow-y: scroll;
 
-export const Header = styled.div`
-  height: 70px;
-  background: #0077b6;
-  z-index: 1;
-  box-shadow: 0 2px 0 rgba(255, 255, 255, 0.5) inset,
-                0 -2px 0 rgba(255, 255, 255, 0.1) inset,
-                0 5px 0 #338494,
-                0 5px 3px rgba(0, 0, 0, 0.5);
-`;
-
-export const Contact = styled.div`
-  background: #0077b6;
-  padding: 10px;
-  display: flex;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.05);
-`;
-
-export const ContactImage = styled.div`
-  width: 100px;
-
-  img {
-    width: 70px;
-    border-radius: 50%;
+  ::-webkit-scrollbar {
+    display: none;
   }
 `;
 
-export const ContactInfo = styled.div`
+export const Contact = styled.li`
+  background-color: ${(props) => props.theme.colors.gray};
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  color: #fff;
+  padding: 5px 20px;
+  border-radius: 20px;
 
-  p {
-    margin-top: 10px;
-    opacity: 0.5;
+  & + li {
+    margin-top: 4px;
   }
+`;
+
+export const Avatar = styled.img`
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+`;
+
+export const Name = styled.strong`
+  margin-left: 15px;
+  color: ${(props) => props.theme.colors.text};
 `;

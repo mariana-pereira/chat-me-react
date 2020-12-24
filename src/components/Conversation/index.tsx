@@ -1,34 +1,24 @@
 import React from 'react';
+import Message from '../Message';
 
 import {
-  Container, Header, MessageContainer, Message,
+  Container, MessageContainer, InputWrapper, Input, SendButton, SendIcon,
 } from './styles';
 
 const Conversation: React.FC = () => (
   <Container>
-    <Header />
     <MessageContainer>
-      <Message isCurrent>
-        <div>
-          <p>kkkk</p>
-        </div>
-      </Message>
-      <Message isCurrent={false}>
-        <div>
-          <p>kkkk</p>
-        </div>
-      </Message>
-      <Message isCurrent>
-        <div>
-          <p>kkkk</p>
-        </div>
-      </Message>
-      <Message isCurrent={false}>
-        <div>
-          <p>kkkk</p>
-        </div>
-      </Message>
+      <Message isCurrent />
+      <Message isCurrent={false} />
+      <Message isCurrent />
+      <Message isCurrent />
     </MessageContainer>
+    <InputWrapper>
+      <Input placeholder="Type a message..." />
+      <SendButton>
+        <SendIcon />
+      </SendButton>
+    </InputWrapper>
   </Container>
 );
 

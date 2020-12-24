@@ -1,11 +1,13 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  width: 100%;
-  height: 100%;
-  display: flex;
+  display: grid;
 
-  .left {
-    width: 35%;
-  }
+  grid-template-columns: 55px 240px auto 240px;
+  grid-template-rows: 250px auto;
+
+  grid-template-areas:
+    'SN UI MC CI'
+    'SN CL MC CI';
+  height: 100vh;
 `;

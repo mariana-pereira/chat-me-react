@@ -10,18 +10,23 @@ export const Container = styled.div`
 
 export const Background = styled.div`
   width: 60%;
-  height: 100%;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+
   img {
     width: 500px;
+  }
+
+  @media screen and (max-width: 700px) {
+    display: none;
   }
 `;
 
 export const Content = styled.div`
   width: 40%;
-  height: 100%;
+  height: 100vh;
   background: linear-gradient(-90deg, #10c3ef, #0077b6);
   display: flex;
   align-items: center;
@@ -54,5 +59,10 @@ export const Content = styled.div`
       margin-top: 10px;
       color: #fff;
       align-self: center;
+    }
+
+    @media screen and (max-width: 700px) {
+      width: 100%;
+      padding: 20px;
     }
 `;
